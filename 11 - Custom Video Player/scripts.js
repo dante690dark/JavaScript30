@@ -29,7 +29,7 @@ function handleRangeUpdate() {
 }
 
 function handleProgress() {
-  const percent = (video.currentTime / video.duration) * 100
+  const percent = (video.currentTime / video.duration) * 100;
   progressBar.style.flexBasis = `${percent}%`;
 }
 
@@ -39,9 +39,9 @@ function scrub(e) {
 }
 
 function toggleFullscreen() {
-  const isFullscreen = document.fullscreenElement || document.webkitFullscreenElement
-  const requestMethod = player.requestFullscreen || player.webkitRequestFullscreen || player.mozRequestFullScreen || player.msRequestFullscreen
-  const exitMethod = document.exitFullscreen || document.webkitExitFullscreen || document.mozCancelFullScreen || document.msExitFullscreen
+  const isFullscreen = document.fullscreenElement || document.webkitFullscreenElement;
+  const requestMethod = player.requestFullscreen || player.webkitRequestFullscreen || player.mozRequestFullScreen || player.msRequestFullscreen;
+  const exitMethod = document.exitFullscreen || document.webkitExitFullscreen || document.mozCancelFullScreen || document.msExitFullscreen;
 
   if (!isFullscreen) {
     requestMethod?.call(player)

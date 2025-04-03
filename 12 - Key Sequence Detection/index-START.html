@@ -7,6 +7,16 @@
     <link rel="icon" href="https://fav.farm/🔥" />
   </head>
   <body>
-    <script></script>
+    <script>
+      
+      const preseed = [];
+      const secretcode = 'hola';
+      
+      window.addEventListener('keyup', (e) => {
+        preseed.push(e.key);
+        preseed.splice(-secretcode.length - 1, preseed.length - secretcode.length);
+        preseed.join('').includes(secretcode) && cornify_add();
+      });
+    </script>
   </body>
 </html>
